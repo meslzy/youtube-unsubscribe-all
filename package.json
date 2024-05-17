@@ -1,0 +1,7 @@
+{
+  "name": "youtube-unsubscribe-all",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@types/chrome": "^0.0.258"
+  }
+}
