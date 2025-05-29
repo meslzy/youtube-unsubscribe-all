@@ -1,0 +1,19 @@
+{
+  "extends": "@meslzy/tsconfig",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "rootDir": "src",
+    "paths": {
+      "~/*": [
+        "./*"
+      ]
+    },
+  },
+  "include": [
+    ".plasmo/index.d.ts",
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+}

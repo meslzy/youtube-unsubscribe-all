@@ -1,0 +1,424 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.help-page {
+  min-height: 100vh;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.help-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Header Styles */
+.help-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #333;
+}
+
+.help-header h1 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.help-subtitle {
+  font-size: 18px;
+  color: #b0b0b0;
+  font-weight: 400;
+}
+
+/* Content Card Styles */
+.content-card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 30px;
+  border: 1px solid #333;
+  margin-bottom: 30px;
+}
+
+.content-card h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.content-card h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
+
+.content-card p {
+  font-size: 16px;
+  color: #b0b0b0;
+  margin-bottom: 15px;
+}
+
+/* About Section */
+.about-section {
+  margin-bottom: 40px;
+}
+
+.contact-links {
+  margin-top: 30px;
+}
+
+.link-button {
+  background-color: #333;
+  color: #e0e0e0;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.link-button:hover {
+  background-color: #444;
+  transform: translateY(-2px);
+}
+
+/* Steps Section */
+.steps-section {
+  margin-bottom: 40px;
+}
+
+.steps-section > h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.step-section {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 30px;
+  border: 1px solid #333;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+}
+
+.step-section:hover {
+  border-color: #444;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.step-content {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.step-info {
+  flex: 1;
+}
+
+.step-header {
+  margin-bottom: 15px;
+}
+
+.step-number {
+  display: inline-block;
+  background-color: #ff0000;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.step-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin: 10px 0 0 0;
+}
+
+.step-description {
+  font-size: 16px;
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+.step-image {
+  flex: 0 0 300px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-image img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #2a2a2a;
+  border: 2px dashed #444;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.image-placeholder span {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.image-placeholder p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Footer Styles */
+.help-footer {
+  margin-top: 50px;
+}
+
+.footer-actions {
+  display: flex;
+  gap: 15px;
+  margin: 25px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primary-button {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+  background-color: #cc0000;
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  background-color: #333;
+  color: #e0e0e0;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+  background-color: #444;
+  transform: translateY(-2px);
+}
+
+/* Troubleshooting Section */
+.troubleshooting-section {
+  margin-bottom: 40px;
+}
+
+.troubleshooting-content {
+  margin-top: 25px;
+}
+
+.troubleshooting-item {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.troubleshooting-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.troubleshooting-item h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.troubleshooting-item p {
+  color: #b0b0b0;
+  margin-bottom: 15px;
+}
+
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.social-button {
+  background-color: #333;
+  color: #e0e0e0;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.social-button:hover {
+  transform: translateY(-2px);
+}
+
+.social-button.discord:hover {
+  background-color: #5865F2;
+}
+
+.social-button.twitter:hover {
+  background-color: #1DA1F2;
+}
+
+.social-button.instagram:hover {
+  background-color: #E4405F;
+}
+
+.social-button.youtube:hover {
+  background-color: #FF0000;
+}
+
+.social-button.linkedin:hover {
+  background-color: #0077B5;
+}
+
+.social-button.github:hover {
+  background-color: #333;
+  border: 1px solid #555;
+}
+
+.troubleshooting-tips {
+  list-style: none;
+  padding-left: 0;
+}
+
+.troubleshooting-tips li {
+  color: #b0b0b0;
+  padding: 8px 0;
+  padding-left: 20px;
+  position: relative;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.troubleshooting-tips li:last-child {
+  border-bottom: none;
+}
+
+.troubleshooting-tips li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .help-container {
+    padding: 20px 15px;
+  }
+  
+  .help-header h1 {
+    font-size: 24px;
+  }
+  
+  .help-subtitle {
+    font-size: 16px;
+  }
+  
+  .content-card {
+    padding: 20px;
+  }
+  
+  .step-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .step-image {
+    flex: none;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .footer-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .step-image {
+    flex: 0 0 250px;
+    height: 150px;
+  }
+  
+  .content-card h2 {
+    font-size: 20px;
+  }
+  
+  .step-title {
+    font-size: 18px;
+  }
+  
+  .troubleshooting-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+  
+  .footer-actions .link-button,
+  .footer-actions .primary-button,
+  .footer-actions .secondary-button {
+    width: 100%;
+    max-width: 250px;
+  }
+}

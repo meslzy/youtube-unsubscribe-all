@@ -1,0 +1,38 @@
+{
+  "name": "youtube-unsubscribe-all",
+  "displayName": "Youtube Unsubscribe All",
+  "description": "Youtube unsubscribe all",
+  "version": "3.0.0",
+  "author": "Meslzy <i@meslzy.com>",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package"
+  },
+  "dependencies": {
+    "plasmo": "0.90.5",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@meslzy/eslint": "2.0.3",
+    "@meslzy/tsconfig": "0.2.9",
+    "@parcel/optimizer-data-url": "2.9.3",
+    "@parcel/transformer-inline-string": "2.9.3",
+    "@types/chrome": "0.0.323",
+    "@types/node": "22.15.24",
+    "@types/react": "19.1.6",
+    "@types/react-dom": "19.1.5",
+    "typescript": "5.8.3"
+  },
+  "manifest": {
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "scripting"
+    ],
+    "host_permissions": [
+      "https://www.youtube.com/*"
+    ]
+  }
+}
