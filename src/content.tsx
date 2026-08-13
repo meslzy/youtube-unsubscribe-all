@@ -66,7 +66,7 @@ const Content = () => {
   const addFilterControls = React.useCallback((subscribeButtons: Element[]) => {
     for (const [index, element] of subscribeButtons.entries()) {
       if (element.querySelector(".subscription-checkbox")) {
-        return;
+        continue;
       }
 
       const channelId = index;
@@ -150,8 +150,41 @@ const Content = () => {
   }, [addFilterControls]);
 
   React.useEffect(() => {
+    // التحميل المبدئي
     loadSubscriptions();
     setLoading(false);
+
+    // إنشاء مراقب لاكتشاف أي قنوات جديدة يتم تحميلها عند عمل Scroll
+    const observer = new MutationObserver((mutations) => {
+      let shouldUpdate = false;
+      
+      for (const mutation of mutations) {
+        if (mutation.addedNodes.length > 0) {
+          // التحقق مما إذا كانت العناصر الجديدة تحتوي على أزرار اشتراك
+          const newButtons = document.querySelectorAll("ytd-subscribe-button-renderer[subscribed]:not(:has(.subscription-checkbox))");
+          if (newButtons.length > 0) {
+            shouldUpdate = true;
+            break;
+          }
+        }
+      }
+
+      // إذا وجدنا قنوات جديدة لم نضف لها Checkbox بعد، نعيد تشغيل الدالة
+      if (shouldUpdate) {
+        loadSubscriptions();
+      }
+    });
+
+    // مراقبة الحاوية الرئيسية ليوتيوب لاكتشاف التغييرات
+    const container = document.querySelector("ytd-app") || document.body;
+    if (container) {
+      observer.observe(container, { childList: true, subtree: true });
+    }
+
+    // تنظيف المراقب عند إغلاق الإضافة أو المكون
+    return () => {
+      observer.disconnect();
+    };
   }, [loadSubscriptions]);
 
   const handleExportList = () => {
